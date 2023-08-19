@@ -117,6 +117,7 @@ touch /etc/rc.conf
       - /
 ' >> /mnt/etc/cloud/cloud.cfg
     fi
+    sed -i '' 's$/bin/tcsh$/bin/sh$' /mnt/etc/cloud/cloud.cfg
 
     if [ ${root_fs} = "zfs" ]; then
         ls /mnt
